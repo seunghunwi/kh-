@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import com.sun.javafx.fxml.BeanAdapter;
+
 public class SmartPhone {
 	Contact[] ct = new Contact[10];
 	int num = 0;
@@ -22,42 +24,46 @@ public class SmartPhone {
 		return ct;
 	}
 	void addContact(Contact contact){// 배열에 연락처 객체 저장
-			ct[num] = contact;
+			ct[num] = contact;	
 			num++;
-			System.out.println(">>> 데이터가 저장되었습니다"+ "("+num+")");
-		}
-		
-		
-	
+			System.out.println(">>> 데이터가 저장되었습니다"+ "("+ num +")");
+		}					
 	void printContact(Contact contact){// 객체 정보 출력
-		contact.printinfo();
-
+		contact.printinfo();	
 	}
 	void printAllConatact() { // 모든 연락처 출력
 		for(int i=0; i<num; i++) {
 			ct[i].printinfo();
-			
-		}
+		}		
 	}
 	void searchContact(String name){ // 연락처 검색
 		for(int i=0; i<=num; i++) {
-			 if(ct[i].getPhonename().contentEquals(name)) {
-				 printContact(ct[i]);	
-				 break;
-			 }		   			       
+			if(ct[i].getPhonename().contentEquals(name)) {
+				printContact(ct[i]);	
+				break;
+			}		   			       
 		}
 	}
 	void deleteContact(String name) { // 연락처 삭제
-            for(int i=0; i<num; i++) {
-            	if(ct[i].getPhonename().contentEquals(name)) {
-   				 ct[i] = ct[i+1];
-   				 ct[i] = ct[i];
-   				 System.out.println("삭제되었습니다.");
-   				 break;
-            	}
-            }          
+		for(int i=0; i<num; i++) {
+			if(ct[i].getPhonename().contentEquals(name)) {
+				ct[i] = ct[i+1];
+				num--;
+				System.out.println("삭제되었습니다.");
+				break;
+			}
+		}
 	}
-	void editContact(String name, Contact newContact) { // 연락처 수정
-
+	void editContact(String name) { // 연락처 수정
+		for(int i=0; i<num; i++) {
+			if(ct[i].getPhonename().contentEquals(name)) {
+				ct[i]=inputContactData();				
+			}
+//			else {
+//				System.out.println("검색결과가 없습니다.");
+//				System.out.println("이름을 다시 입력하세요.");
+//				break;
+//			}		
+		}
 	}
 }
