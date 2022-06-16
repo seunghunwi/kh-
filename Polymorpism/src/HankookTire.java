@@ -16,7 +16,8 @@ public class HankookTire extends  Tire {
 	    		return true;
 	    	}else {
 	    		System.out.println("***" + location + "HankookTire 펑크***");
-	    		return false;
+	    		return true;
+	    		
 	    		
 	    	}
 	  }
