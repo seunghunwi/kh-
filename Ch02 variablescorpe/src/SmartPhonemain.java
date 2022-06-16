@@ -12,44 +12,35 @@ public class SmartPhonemain {
 	}
 
 	public static void main(String[] args) {
+		String name;
 		boolean a = true;
 		SmartPhone sp = new SmartPhone();	
 		Scanner sc = new Scanner(System.in);
 		System.out.println("# 데이터 두개를 입력합니다.");	
 		sp.addContact(sp.inputContactData());
 		sp.addContact(sp.inputContactData());
-		AllPrint();	
-		while(a) {				 				 
-			switch(sc.nextInt())  {
-			case 1: sp.addContact(sp.inputContactData());
-				    AllPrint();	
-				    break;		  		     
-			case 2: sp.printAllConatact();
-			        AllPrint();	
-			        break;
+		
+		while(a) {	
+			AllPrint();	
+			switch(sc.nextInt()){
+			case 1: sp.addContact(sp.inputContactData());			
+			break;		  		     
+			case 2: sp.printAllConatact();		
+			break;
 			case 3:	System.out.println("이름을 입력하세요 :");
-			        sp.searchContact(sc.next());
-			        AllPrint();	
-			        break;
+			sp.searchContact(sc.next());			
+			break;
 			case 4: System.out.println("삭제할 이름을 입력하세요 :");
-			        sp.deleteContact(sc.next());
-			        AllPrint();	
-			        break;
-			case 5:
-				    break;
+			sp.deleteContact(sc.next());			
+			break;
+			case 5:  System.out.println("수정할 이름 :");
+			sp.editContact(sc.next());			
+			break;
 			case 6: System.out.println("프로그램을 종료합니다.");
-			        a = false;
-			        break;
-		  default : System.out.println("잘못된 번호를 입력하셨습니다.");
-			        return;
-
-
-
-
-
-
-
-
+			a = false;
+			break;
+			default : System.out.println("잘못된 번호를 입력하셨습니다.");
+			return;
 			}
 
 		}	
