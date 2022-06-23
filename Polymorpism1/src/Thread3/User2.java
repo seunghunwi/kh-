@@ -7,7 +7,7 @@ private Calculator c;
 	public void setClaculator(Calculator calculator) {
 		this.setName("User2");
 		this.c = calculator;
-		0
+		
 		
 	}
 	
