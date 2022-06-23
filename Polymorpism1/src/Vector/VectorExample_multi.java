@@ -11,7 +11,7 @@ public class VectorExample_multi {
 		
 		class ThreadA extends Thread {
 			public void run() {
-				for(int i=0; i<1000; i++) {
+				for(int i=0; i<10; i++) {
 				list.add(new Board("제목1","내용1","글쓴이1"));
 			
 				}
@@ -20,8 +20,8 @@ public class VectorExample_multi {
 
 	 class ThreadB extends Thread {
 		 public void run() {
-				for(int i=0; i<1000; i++) {
-				list.add(new Board("제목1","내용1","글쓴이1"));
+				for(int i=0; i<10; i++) {
+				list.add(new Board("제목2","내용2","글쓴이2"));
 				}
 		 }
 	 }
@@ -29,8 +29,8 @@ public class VectorExample_multi {
 	ThreadA threadA = new ThreadA();
 	threadA.start();
 	
-	ThreadB treadB = new ThreadB();
-	
+	ThreadB threadB = new ThreadB();
+	threadB.start();
 	Thread mainThread = Thread.currentThread();
 	
 	try {mainThread.sleep(5000);} catch(Exception e) {} 
