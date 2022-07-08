@@ -11,7 +11,9 @@ public class CompanyContact extends Contact {
 	
 	
 	
-	CompanyContact(String phonename, String phonenumber, String mail, String account, String birth, String group, String CompanyName, String departmentName, String rank) {
+	CompanyContact(String phonename, String phonenumber, String mail, String account, String birth,
+			              String group, String CompanyName, String departmentName, String rank) {
+		
 		super(phonename, phonenumber, mail, account, birth, group);
 		this.CompanyName = CompanyName;
 		this.departmentName = departmentName;

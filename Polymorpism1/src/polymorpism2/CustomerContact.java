@@ -12,7 +12,9 @@ public class CustomerContact extends Contact{
 	
 	
 	
-	CustomerContact(String phonename, String phonenumber, String mail, String account, String birth, String group, String businessname, String transactionItems, String rank) {
+	CustomerContact(String phonename, String phonenumber, String mail, String account, String birth,
+			          String group, String businessname, String transactionItems, String rank) {
+		
 		super(phonename, phonenumber, mail, account, birth, group);
 		this.businessName = businessname;
 		this.transactionItems = transactionItems;

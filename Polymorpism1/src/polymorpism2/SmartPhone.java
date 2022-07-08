@@ -50,12 +50,6 @@ public class SmartPhone {
 		return new Contact(name, phoneNumber,email, account, birth, group);
 	}
 
-
-
-
-
-
-
 	void addContact(Contact contact){// 배열에 연락처 객체 저장
 
 		ct[num] = contact;	

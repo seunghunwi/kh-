@@ -15,10 +15,7 @@ public class Contact {
 		this.mail = mail;
 		this.account = account;
 		this.birth = birth;
-		this. group = group;
-		
-    
-    
+		this. group = group;  
 
 	}
 
