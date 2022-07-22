@@ -7,7 +7,7 @@ public class Audio implements RemorteCont {
      public void turnOn() {
     	 System.out.println("TV를 켭니다.");
      }
-	// turnOff() 추상 메소드의 실체 메소드
+	//turnOff() 추상 메소드의 실체 메소드
      public void turnOff() {
     	 System.out.println("TV를 끕니다.");
      }
