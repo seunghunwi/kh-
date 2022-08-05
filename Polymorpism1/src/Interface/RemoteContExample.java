@@ -13,10 +13,13 @@ public class RemoteContExample {
 			}
 			public void setVolume() {/* 실행문*/}
 		};		 
-           rc.turnOn();
-           rc.turnOff();
-           rc.setMute(true);
-           RemorteCont.changeBattery();
+		   Audio ad = new Audio();
+		   
+		   ad.turnOn();
+//           rc.turnOn();
+//           rc.turnOff();
+//           rc.setMute(true);
+//           RemorteCont.changeBattery();
 	}
 
 }
